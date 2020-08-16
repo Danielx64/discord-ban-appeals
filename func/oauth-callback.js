@@ -30,7 +30,7 @@ exports.handler = async function (event, context) {
         const data = await result.json();
 
         const user = await getUserInfo(data.access_token);
-        if (process.env.GUILD_ID && !process.env.SKIP_BAN_CHECK) {
+/*         if (process.env.GUILD_ID && !process.env.SKIP_BAN_CHECK) {
             if (!await userIsBanned(user.id, process.env.GUILD_ID, process.env.DISCORD_BOT_TOKEN)) {
                 return {
                     statusCode: 303,
@@ -39,7 +39,7 @@ exports.handler = async function (event, context) {
                     }
                 };
             }
-        }
+        } */
 
         const userPublic = {
             id: user.id,

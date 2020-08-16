@@ -48,19 +48,7 @@ exports.handler = async function (event, context) {
                 value: payload.futureActions
             }
         ];
-
-        if (process.env.GUILD_ID && !process.env.DISABLE_UNBAN_LINK) {
-            const unbanUrl = new URL("/.netlify/functions/unban", process.env.URL);
-            const unbanInfo = {
-                userId: userInfo.id
-            };
-
-            embedFields.push({
-                name: "Actions",
-                value: `[Approve appeal and unban user](${unbanUrl.toString()}?token=${encodeURIComponent(createJwt(unbanInfo))})`
-            });
-        }
-
+        
         const result = await fetch(`${API_ENDPOINT}/channels/${encodeURIComponent(process.env.APPEALS_CHANNEL)}/messages`, {
             method: "POST",
             headers: {
