@@ -8,11 +8,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
 
-        <title>Ban appeal form</title>
+        <title>Discord trial moderator application</title>
     </head>
     <body>
         <div class="jumbotron text-center">
-            <h1>Ban appeal form</h1>
+            <h1>Discord trial moderator application</h1>
         </div>
 
         <div class="container">
@@ -24,16 +24,53 @@
             <form class="mt-3" method="post" name="appeal" action="/success" netlify>
                 <input type="hidden" id="token" name="token">
                 <div class="form-group">
-                    <label for="banReason">Why where you banned?</label>
-                    <textarea class="form-control" id="banReason" name="banReason" required></textarea>
+                    <label for="banReason">How long have you been an active user of Discord?</label>
+                    <select name="cars" id="cars">
+                        <option value="1-7 months">1-7 months</option>
+                        <option value="7-12 months">7-12 months</option>
+                        <option value="1-2 years">1-2 years</option>
+                        <option value="2-3 years">2-3 years</option>
+                        <option value="3+ years">3+ years</option>
+                        <option value="I don't know">I don't know</option>
+                      </select>
                 </div>
                 <div class="form-group">
-                    <label for="appealText">Why do you feel you should be unbanned?</label>
-                    <textarea class="form-control" id="appealText" name="appealText" required></textarea>
+                    <label for="appealText">Which timezone do you currently live in? <br>
+                        <span>GMT/UTC timezone expression (example GMT+3). Refer to https://whatismytimezone.com for help, it shows your timezone at third line within the first section</span</label>
+                    <input type="text" class="form-control" id="appealText" name="appealText" required/>
                 </div>
+
                 <div class="form-group">
-                    <label for="futureActions">What will you do to avoid being banned in the future?</label>
+                    <label for="futureActions">Why do you want to be a moderator of this particular community?<br>
+      <span>What value could you bring to our team, community</span></label>
                     <textarea class="form-control" id="futureActions" name="futureActions" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="futureActions">Something about yourself(optional)<br>
+                        <span>Break the ice! Or don't..</span></label>
+                    <textarea class="form-control" id="futureActions" name="futureActions" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="futureActions">Have you ever moderated before on Discord?</label>
+                    <select name="cars" id="cars">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="futureActions">Do you currently moderate any kind of community?</label>
+                    <select name="cars" id="cars">
+                        <option value="No">No</option>
+                        <option value="Yes">Yes</option>
+                      </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="futureActions">What kind of community is it? What are you responsible for there?</label>
+                    <textarea class="form-control" id="futureActions" name="futureActions"></textarea>
                 </div>
                 <div class="text-right">
                     <button type="submit" class="btn">Submit</button>
